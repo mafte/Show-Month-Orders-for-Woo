@@ -150,6 +150,11 @@ All-In-One-WP-Migration-With-Import-master
 ai1wm-backups
 local-by-flywheel-live-link-helper.php
 be-media-from-production
+wp-migrate-db-pro
+wp-migrate-db-pro-media-files
+wp-migrate-db-pro-theme-plugin-files
+wp-migrate-db-pro-compatibility.php
+wp-migrate-db
 
 # Ignore themes
 wp-content/themes/twenty*/
