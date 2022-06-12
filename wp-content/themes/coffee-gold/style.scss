@@ -1,0 +1,196 @@
+/*!
+Theme Name:		 Coffee Gold
+Theme URI:		 https://github.com/mafte/Show-Month-Orders-for-Woo
+Description:	 Coffee Gold is a child theme of Storefront.
+Author:			 Manuel Castillo
+Author URI:		 https://github.com/mafte
+Template:		 storefront
+Version:		 1.0.0
+Text Domain:	 coffe-gold
+*/
+
+/* ●●● BREAKPOINTS BOOSTRAP
+❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱❱ */
+
+$boo-sm: 36em;
+$boo-md: 48em;
+$boo-lg: 62em;
+$boo-xl: 75em;
+
+:root {
+	--c-gray: #ababab;
+	--c-accent: #b1c40f;
+}
+
+html,
+body,
+p, input, textarea, button {
+	font-family: "Quicksand", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Cormorant Infant", serif;
+}
+
+*:focus {
+	outline-color: var(--c-accent) !important;
+}
+
+#primary {
+	width: 100%;
+	margin-right: 0;
+}
+
+#product-single {
+	display: flex;
+	flex-wrap: wrap;
+	.woocommerce-product-gallery {
+		margin: 0;
+		width: calc((100% / 12) * 6);
+		border-radius: 10px;
+		overflow: hidden;
+
+		@media screen and (max-width: $boo-md) {
+			width: 100%;
+		}
+	}
+
+	.summary {
+		margin: 0;
+		width: calc((100% / 12) * 6);
+		padding: 2rem 2.5rem;
+
+		@media screen and (max-width: $boo-md) {
+			width: 100%;
+			padding: 2rem 1.5rem;
+		}
+
+        @media screen and (max-width: $boo-sm){
+            padding: 2rem 0;
+        }
+
+	}
+
+	.woocommerce-product-gallery__wrapper {
+		height: 100%;
+
+		> div {
+			height: 100%;
+		}
+
+		a {
+			height: 100%;
+			display: block;
+
+			img {
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
+			}
+		}
+	}
+
+	.woocommerce-product-gallery__trigger {
+		background: white;
+		border-radius: 50px;
+		--size: 2.5rem;
+		height: var(--size);
+		width: var(--size);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+	}
+
+	.metadata {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 2rem;
+
+		> * {
+			margin: 0;
+		}
+	}
+
+	.star-rating {
+		transform: scale(0.8);
+
+		span:before {
+			color: #fdc601;
+		}
+	}
+
+	.woocommerce-Price-amount {
+		color: #b1c40f;
+		font-size: 1.3rem;
+		letter-spacing: 0.8px;
+	}
+
+	.product_title {
+		margin-bottom: 0.5rem;
+		color: #535353;
+		font-size: 3rem;
+	}
+
+	.woocommerce-product-details__short-description {
+		color: var(--c-gray);
+		font-size: 0.9rem;
+	}
+
+	.cart {
+		margin-bottom: 0.5rem;
+		input[type="number"] {
+			border-radius: 50px;
+			border: 1px solid var(--c-gray);
+			box-shadow: none;
+			padding-right: 0.5rem;
+			padding-left: 2rem;
+			width: 6rem;
+			background: white;
+			text-align: left;
+			color: var(--c-gray);
+
+			&:focus {
+				outline-color: var(--c-accent);
+			}
+		}
+
+		button[type="submit"] {
+			height: 48px;
+			border-radius: 50px;
+			font-size: 0.8rem;
+			padding: 0 2rem;
+			background: var(--c-accent);
+			font-family: "Quicksand";
+			font-weight: 600;
+			transition: 0.3s;
+
+			&:hover {
+				background: #a1b30a;
+			}
+		}
+	}
+
+	.product_meta {
+		border: none;
+		color: #535353;
+
+		span + span {
+			margin-top: 0.2rem;
+		}
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
