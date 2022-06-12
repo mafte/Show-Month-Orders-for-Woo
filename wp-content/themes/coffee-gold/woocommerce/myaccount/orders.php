@@ -26,11 +26,7 @@ do_action('woocommerce_before_account_orders', $has_orders);
 
 <?php if ($has_orders) : ?>
 
-    <?php if (isset($_SESSION['message_cancel_order']) && $_SESSION['message_cancel_order'] === true) : ?>
-        <h2><?php echo 'Orden de <span style="color:lightseagreen">' . wp_get_current_user()->user_email . '</span> cancelada'; ?></h2>
-    <?php
-    endif; ?>
-    <?php session_destroy(); ?>
+
 
     <table class="woocommerce-orders-table woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table">
         <thead>

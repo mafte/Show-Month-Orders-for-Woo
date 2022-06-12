@@ -12,25 +12,12 @@ function custom_valid_order_statuses_for_cancel($statuses, $order) {
 	// Set HERE the order statuses where you want the cancel button to appear
 	$custom_statuses    = array('completed', 'pending', 'processing', 'on-hold', 'failed');
 
-	// Set HERE the delay (in days)
-	$duration = 3; // 3 days
+	return $custom_statuses;
+}
 
-	// UPDATE: Get the order ID and the WC_Order object
-	if (isset($_GET['order_id']))
-		$order = wc_get_order(absint($_GET['order_id']));
-
-	$delay = $duration * 24 * 60 * 60; // (duration in seconds)
-	$date_created_time  = strtotime($order->get_date_created()); // Creation date time stamp
-	$date_modified_time = strtotime($order->get_date_modified()); // Modified date time stamp
-	$now = strtotime("now"); // Now  time stamp
-
-	// Using Creation date time stamp
-	if (($date_created_time + $delay) >= $now) {
-
-		$_GET['redirect'] = "http://lexart-labs.local/my-account/orders/";
-		$_SESSION['message_cancel_order'] = true;
-		return $custom_statuses;
-	} else return $statuses;
+add_filter('woocommerce_order_cancelled_notice', 'ow_filter_notice');
+function ow_filter_notice($message) {
+	return 'Orden de <span class="show-order-message">' . wp_get_current_user()->user_email . '</span> cancelada';
 }
 
 
