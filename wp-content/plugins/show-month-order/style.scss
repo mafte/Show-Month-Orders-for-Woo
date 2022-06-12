@@ -1,0 +1,63 @@
+#show-orders{
+    background: white;
+    width: 100%;
+    padding: 1rem;
+    border-collapse: collapse;
+    max-width: 1200px;
+
+    thead{
+        background: #135e96;
+    color: white;
+    font-size: 1rem;
+        tr{
+
+        }
+    }
+
+    tr{
+        padding: 0.5rem;
+
+        th:last-child, td:last-child{
+            display: none;
+        }
+    }
+
+    th{
+        padding: 0.5rem;
+    }
+
+    td{
+        padding: 0.5rem;
+        border: none;
+        text-align: center;
+    }
+
+    tbody{
+        tr:nth-child(odd){
+            background: #eef7ff;
+        }
+
+        tr:nth-child(even){
+        }
+    }
+    tfoot{
+        border-top: 1px solid #f3f3f3;
+    }
+}
+
+.message-show-orders{
+    padding: 1rem;
+    color: #a77500;
+    background: #fff7d5;
+    border-left: 5px solid #ffaf00;
+}
+
+.container-show-orders{
+    .title{
+        font-weight: 700!important;
+    }
+
+    .subtitle-show-orders{
+        font-size: 1rem;
+    }
+}

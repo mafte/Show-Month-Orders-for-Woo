@@ -1,0 +1,46 @@
+#show-orders {
+  background: white;
+  width: 100%;
+  padding: 1rem;
+  border-collapse: collapse;
+  max-width: 1200px;
+}
+#show-orders thead {
+  background: #135e96;
+  color: white;
+  font-size: 1rem;
+}
+#show-orders tr {
+  padding: 0.5rem;
+}
+#show-orders tr th:last-child, #show-orders tr td:last-child {
+  display: none;
+}
+#show-orders th {
+  padding: 0.5rem;
+}
+#show-orders td {
+  padding: 0.5rem;
+  border: none;
+  text-align: center;
+}
+#show-orders tbody tr:nth-child(odd) {
+  background: #eef7ff;
+}
+#show-orders tfoot {
+  border-top: 1px solid #f3f3f3;
+}
+
+.message-show-orders {
+  padding: 1rem;
+  color: #a77500;
+  background: #fff7d5;
+  border-left: 5px solid #ffaf00;
+}
+
+.container-show-orders .title {
+  font-weight: 700 !important;
+}
+.container-show-orders .subtitle-show-orders {
+  font-size: 1rem;
+}
